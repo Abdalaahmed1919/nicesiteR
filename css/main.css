@@ -1,0 +1,659 @@
+:root {
+   --main-color: #345995;
+   --yellow-color: #FFD166;
+   --gray-color: #545454;
+   --main-transition: 0.3s;
+}
+body {
+    font-family: "Outfit", sans-serif;
+}
+/* Start Nav */
+/* .navbar {
+    height: 85px;
+} */
+.navbar .nav-item {
+    font-size: 15px;
+    margin-left: 40px;
+}
+.navbar .nav-item .nav-link {
+    color: var(--gray-color);
+    font-weight: bold;
+    transition: 0.5s;
+    position: relative;
+}
+.navbar .nav-item .nav-link:hover {
+    color: var(--main-color);
+}
+.navbar .nav-item .nav-link::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    transition: 0.3s;  
+}
+.navbar .nav-item .nav-link:hover:after {
+    width: 100%;
+}
+.navbar .nav-item .nav-link.active {
+    color: var(--main-color);
+    font-weight: bold;
+}
+.navbar-brand img {
+  width: 200px;
+}
+.navbar {
+    position: absolute;
+    z-index: 1;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 35px;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 4;
+}
+.navbar .contactus {
+   padding: 0px 40px;
+}
+.navbar .contactus a {
+    text-decoration: none;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: var(--main-transition);
+    border: 1px solid var(--main-color);
+}
+.navbar .contactus a:hover {
+    background-color: #ffffff;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}   
+.navbar-toggler:focus {
+    outline: 5px solid var(--main-color) !important;
+}
+@media (max-width: 1085px) {
+    .navbar .contactus {
+        padding: 0 3px;
+        width: 130px;
+    }
+}
+.lang {
+    position: fixed;
+}
+/* End Nav */
+/* Start home */
+.home {
+    background-image: url("../imgs/nice/1.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.home::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #000000b9;
+    /* border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px; */
+}
+.home h1 {
+    /* position: absolute; */
+    /* top: 50%; */
+    z-index: 2;
+    color: white;
+    font-weight: bold;
+    margin-left: 50px;
+    transform: translate(-20%,-50%);
+    transition: 1s;
+    transition-delay: 0.2s;
+}
+.home .text {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+.home h1 span:first-child {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 60px;
+}
+.home p {
+    color: white;
+    font-weight: bold;
+    margin-left: 50px;
+    max-width: 300px;
+    position: relative;
+    top: -35px;
+    color: var(--yellow-color);
+    transform: translateX(-20%);
+    transition: 1s;
+    transition-delay: 0.1s;
+}
+.home .contactus a {
+    text-decoration: none;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: var(--main-transition);
+    border: 1px solid var(--main-color);
+}
+.home .contactus a:hover {
+    background-color: #ffffff;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}  
+.home .contactus {
+    margin-left: 50px;
+    transform: translateX(-20%);
+    transition: 1s;
+    transition-delay: 0.3s;
+}
+.home h1 span {
+ 
+}
+/* End home */
+/* Start about */
+.about {
+    padding-top: 100px;
+    position: relative;
+}
+.about h3 {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 40px;
+    transform: translateX(-20px);
+    transition: 1s;
+}
+.about p {
+    color: var(--gray-color);
+    font-weight: bold;
+    transform: translateY(25px);
+    transition: 1s;
+}
+ .funabout {
+    position: absolute;
+    right: 13%;
+    top: -10%;
+}
+.funabout .grid {
+    width: 150px;
+}
+.funabout .circle {
+    width: 50px;
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    z-index: -1;
+}
+.about .vector-1 {
+    position: absolute;
+    right: 43%;
+    top: -6%;
+    transition-delay: 0.2s;
+}
+.about .vector-2 {
+    position: absolute;
+    top: -6%;
+    left: 14%;
+    transform: rotateZ(-180deg);
+    width: 16px;
+    transition-delay: 0.4s;
+}
+.about img{
+    opacity: 0;
+    transition: 1s;
+}
+.about img.active {
+    opacity: 1;
+}
+@media (max-width: 750px) {
+     .about .funabout .grid {
+         width: 100px;
+     }
+     .about .funabout .circle {
+         width: 30px;
+     }
+}
+/* End about */
+/* Start Templets */
+.templets {
+    padding: 60px;
+    margin-top: 80px;
+    position: relative;
+    background-color: #f3f3f3;
+}
+.templets h2 {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 40px;
+}
+.templets .graycard {
+    background-color: #3f3f3f;
+    height: 300px;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.templets .graycard h3 {
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    position: relative;
+    z-index: 1;
+}
+.templets .graycard ul {
+    list-style: none;
+} 
+.templets .graycard ul li {
+    padding-top: 30px;
+    color: #7a7a7a;
+    font-weight: bold;
+    position: relative;
+    padding-right: 150px;
+    font-size: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.templets .graycard ul li:hover {
+    color: white;
+}
+.templets .graycard ul li:first-child {
+    color: white;
+}
+.templets .graycard ul li:not(:last-child):after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: #7a7a7a;
+    bottom: -15px;
+    left: -3px;
+}
+.templets .graycard ul li span {
+    position: absolute;
+    right: 0;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center; 
+}
+.templets .graycard .ball_1 {
+    position: absolute;
+    width: 65px;
+    bottom: 15px;
+    left: 30%;
+    /* transform: translateY(-30px); */
+    /* transition: 1s; */
+    animation: ball 1s infinite;
+}
+.templets .graycard .ball_2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 65px;
+}
+.templets .graycard .lolbe {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 120px;
+}
+.templets .graycard .graywall {
+    position: absolute;
+    height: 100%;
+    left: 15%;
+}
+.templets .graycard i {
+    position: absolute;
+    left: -32px;
+    bottom: 0px;
+    font-size: 25px;
+}
+.templets .star {
+    position: absolute;
+    right: 4%;
+    top: 5%;
+    width: 100px;
+}
+.templets .row .card .card-text {
+    color: var(--main-color);
+    font-weight: bold;
+}
+.templets .row .card {
+    transform: translateY(35px);
+    opacity: 0;
+    transition: 1.2s;
+}
+.templets .row .card.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.templets .row .n_1 {
+    transition-delay: 0.2s;
+}
+.templets .row .n_2 {
+    transition-delay: 0.4s;
+}
+.templets .row .n_3 {
+    transition-delay: 0.6s;
+}
+.templets .row .n_4 {
+    transition-delay: 0.8s;
+}
+.templets .row .n_5 {
+    transition-delay: 1s;
+}
+.templets .row .n_6 {
+    transition-delay: 1.2s;
+}
+.templets .imporatant h3 {
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: bold;
+}
+.templets .imporatant .accordion-body {
+    background-color: var(--gray-color);
+    color: white;
+    font-weight: bold;
+}
+.templets .imporatant button {
+    border-radius: 0;
+    background-color: var(--gray-color);
+    color: var(--yellow-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+.templets .card .link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-1000% , -60%);
+    z-index: 999;
+    transition: 0.5s;
+}
+.templets .card  {
+    overflow: hidden;
+}
+.templets .card .image::before {
+    position: absolute;
+    content: "";
+    background-color: #ffd16685;
+    width: 100%;
+    height: calc(100% - 56px );
+    transform: translateX(-1000px);
+    transition: 0.5s;
+}
+.templets .card .image:hover::before {
+    transform: translateX(0);
+}
+.templets .card .image:hover .link {
+    transform: translate(-50% , -60%);
+}
+.templets .card .link  a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+@media (max-width: 390px) {
+    .templets .row .card {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+}
+@media (max-width: 768px) {
+    .templets .graycard {
+        flex-direction: column;
+        height: fit-content;
+    }
+    .templets .graycard .graywall {
+        display: none;
+    }
+    .templets .graycard {
+        margin-left: -70px;
+        margin-right: -70px;
+    }
+    .templets .graycard .ball_1 {
+        width: 35px;
+        left: 0;
+    }
+    .templets .graycard .ball_2 {
+        width: 35px;
+    }
+    .templets .graycard ul li span {
+        right: 20px;
+    }
+    .templets .graycard ul li {
+        /* padding-left: 40px; */
+    }
+}
+@keyframes ball {
+     0% {
+         transform: translateY(0);
+     }
+     50% {
+         transform: translateY(-30px);
+     }
+     100% {
+         transform: translateY(0);
+     }
+}
+/* End Templets */
+/* Start Featured */
+.featured {
+    padding: 60px;
+    margin-top: 80px;
+    position: relative;
+}
+.featured h2 {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 40px;
+}
+.featured .row .card {
+    background-color: #3f3f3f;
+    height: 260px;
+    transform: translateY(80px);
+    transition: 1s;
+    opacity: 0;
+}
+.featured .row .card.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.featured .row .card .card-title {
+    color: #6fa1d6;
+    color: var(--yellow-color);
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px;
+}
+.featured .row .card .card-text {
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+.featured i {
+    color: var(--main-color);
+    position: absolute;
+    right: 7%;
+    top: 60px;
+    font-size: 40px;
+    transform: rotate(-40deg);
+    animation: htmlicon 1s infinite;
+}
+@keyframes htmlicon {
+    0% {
+        transform:  rotate(-40deg) translateY(0);
+    }
+    50% {
+        transform:  rotate(-40deg) translateY(30px);
+    }
+    100% {
+        transform:  rotate(-40deg)   translateY(0);
+    }
+}
+@media (max-width: 500px) {
+    .featured .row .card {
+        margin: 0 -45px;
+    }
+}
+/* End Featured */
+/* Start Contactus */
+.contactuspage {
+    padding: 60px;
+    margin-top: 80px;
+    position: relative;
+    background-color: #f3f3f3;
+}
+.contactuspage h2 {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 40px;
+}
+.contactuspage .pfirst {
+    color: var(--gray-color);
+    position: relative;
+    top: -10px;
+    left: 7px;
+}
+.contactuspage .information p {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 20px;
+}
+.contactuspage .information p span {
+    color: var(--gray-color);
+}
+.contactuspage .funabout {
+    z-index: 1;
+    top: 10%;
+}
+.contactuspage .lolbecontact{
+    position: absolute;
+    left: 10%;
+    bottom: 4%;
+    width: 100px;
+}
+.contactuspage .upcontact {
+    position: absolute;
+    left: 0;
+    top: -32px;
+    width: 220px;
+}
+.contactuspage .whatsapp {
+    font-size: 28px;
+    color: var(--main-color);
+    margin-left: 6px;
+    position: relative;
+    top: 2px;
+    transition: 0.3s;
+}
+.contactuspage .whatsapp:hover {
+    color: var(--yellow-color);
+}
+@media (max-width: 750px) {
+   .contactuspage .funabout {
+       display: none;
+   }
+   .contactuspage .lolbecontact {
+       width: 60px;
+   }
+}
+/* End Contactus */
+/* Start Footer */
+.footer {
+    padding: 60px;
+    padding-bottom: 35px;
+    background-color: var(--main-color);
+}
+.footer .logo {
+    width: 200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.footer ul  {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footer ul li  {
+   color: white;
+}
+.footer ul li a:hover {
+    color: var(--yellow-color);
+}
+.footer .col_1 {
+    font-size: 20px;
+}
+
+.footer  .socialmedia i {
+    color: var(--yellow-color);
+    font-size: 30px;
+    padding: 10px;
+    transition: 0.3s;
+}
+.footer  .socialmedia i:hover {
+    color: #ffe19c;
+}
+.footer .bootomfooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.footer .bootomfooter img {
+    position: relative;
+    left: -3px;
+    top: -2px;
+}
+.footer .bootomfooter a p {
+  color: white;
+  transition: 0.3s;
+}
+.footer .bootomfooter a p:hover {
+  color: var(--yellow-color);
+}
+/* End Footer */
+.whatsappicon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+.whatsappicon i{
+   font-size: 50px;
+   color: var(--main-color);
+}
+.whatsappicon p {
+    position: absolute;
+    top: 15px;
+    left: -100px;
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.5s;
+    transform: translateX(200px);
+    color: var(--yellow-color);
+}
+.whatsappicon:hover p {
+    transform: translateX(0);
+}
+
+
+
+
+
+

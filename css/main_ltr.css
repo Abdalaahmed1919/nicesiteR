@@ -1,0 +1,25 @@
+
+.templets .graycard .lolbe {
+    right: 0;
+}
+.templets .graycard .graywall {
+    right: 15%;
+}
+.templets .graycard .ball_1 {
+    right: 30%;
+}
+.featured i {
+    left: 7%;
+    display: none;
+}
+.footer .logo {
+    position: relative;
+    left: -50%;
+    transform: translateX(50%);
+}
+.footer .logo  img  {
+  width: 200px;
+}
+.footer .bootomfooter img {
+    right: -3px;
+}
